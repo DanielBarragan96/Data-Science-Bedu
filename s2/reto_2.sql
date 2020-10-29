@@ -11,4 +11,4 @@ SELECT count(*) FROM articulo WHERE nombre LIKE "%pasta%";
 #¿Cuál es el salario mínimo y máximo?
 SELECT MIN(salario), MAX(salario) FROM puesto;
 #¿Cuál es la suma del salario de los últimos cinco puestos agregados?
-select sum(salario) as "Suma ultimos 5 salarios" from (select salario from puesto order by id_puesto desc limit 5) as last5Salario;
+SELECT SUM(salario) FROM (SELECT salario FROM puesto ORDER BY id_puesto DESC LIMIT 5) AS sum5;
