@@ -1,0 +1,15 @@
+[{
+    $project: {
+        name: 1,
+        amenities: 1,
+        _id: 0
+    }
+}, {
+    $match: {
+        amenities: {
+            $in: ["Internet", "Wifi", "Ethernet"]
+        }
+    }
+}, {
+    $count: 'Numero de casas con internet'
+}]
